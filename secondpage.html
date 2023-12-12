@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tips Calculator</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+
+  <!-- Bootstrap JavaScript (optional) -->
+  <!-- Required dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+  
+   <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="p-3 mb-2 bg-dark text-light">
+      <title>Tips Calculator</title>
+    <script>
+        function calculateTip() {
+            // Get the meal amount and selected tip percentage
+            var mealAmount = parseFloat(document.getElementById("mealAmount").value);
+            var tipPercentage = parseFloat(document.getElementById("tipPercentage").value);
+
+            // Calculate the tip and total bill
+            var tipAmount = (mealAmount * tipPercentage) / 100;
+            var totalBill = mealAmount + tipAmount;
+
+            // Display the results on the webpage
+            document.getElementById("tipAmount").innerHTML = "Tip Amount: $" + tipAmount.toFixed(2);
+            document.getElementById("totalBill").innerHTML = "Total Bill: $" + totalBill.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Tips Calculator</h1>
+    <form>
+        <label for="mealAmount">Enter Meal Amount:</label>
+        <input type="number" id="mealAmount" placeholder="Meal Amount" required><br><br>
+
+        <label for="tipPercentage">Select Tip Percentage:</label>
+        <select id="tipPercentage">
+            <option value="10">10%</option>
+            <option value="15">15%</option>
+            <option value="20">20%</option>
+        </select><br><br>
+
+        <button type="button" onclick="calculateTip()">Calculate</button>
+    </form>
+
+    <div id="tipAmount"></div>
+    <div id="totalBill"></div>
+    <br>
+
+    </div>
+  </div>
+</div>
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<div class="navbar">
+
+ <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="boilerplate (1).html"><i class="fas fa-home"> </i></a>
+    <a class="navbar-brand" href="secondpage.html" target="_blank"><i class="fa fa-fw fa-coins"></i></a>
+    <a class="navbar-brand" href="thirdpage.html" target="_blank"><i class="fa fa-fw fa-dice"> </i></a>
+    <a class="navbar-brand" href="fourthpage.html" target="_blank"> <i class="fa fa-fw fa-calculator"></i></a>
+
+  </nav>
+</div>
+</nav>
+</div>
+
+
+</body>
+</html>
